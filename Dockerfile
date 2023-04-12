@@ -1,6 +1,6 @@
 # einsteintoolkit
-FROM ubuntu:16.04
-MAINTAINER Erik Schnetter <schnetter@gmail.com>
+FROM ubuntu:22.04
+LABEL maintainer="Zhen Zhong <auroradysis@gmail.com>"
 
 # Install necessary Ubuntu packages
 RUN apt-get update &&                                   \
@@ -37,7 +37,7 @@ RUN git config --global user.email "scientist@localhost" &&             \
 # Download the Einstein Toolkit
 RUN mkdir Cactus simulations &&                                 \
     /tmp/GetComponents --parallel /tmp/einsteintoolkit.th
-WORKDIR Cactus
+WORKDIR /home/scientist/Cactus
 # TODO: Move these into the Einstein Toolkit
 COPY /einsteintoolkit.ini simfactory/mdb/machines/
 COPY /einsteintoolkit.cfg simfactory/mdb/optionlists/
