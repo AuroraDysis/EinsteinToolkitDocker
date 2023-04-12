@@ -5,7 +5,7 @@ LABEL maintainer="Zhen Zhong <auroradysis@gmail.com>"
 # Install necessary Ubuntu packages
 RUN apt-get update &&                                   \
     apt-get install -y                                  \
-    curl git perl python subversion wget                \
+    curl git perl python3 subversion wget               \
     build-essential g++ gcc gfortran make pkg-config    \
     gsl-bin libgsl0-dev                                 \
     h5utils hdf5-helpers hdf5-tools libhdf5-openmpi-dev \
@@ -20,9 +20,9 @@ RUN apt-get update &&                                   \
     petsc-dev                                           \
     zlib1g zlib1g-dev
 
-# Download installer (need to do this as root)
-ADD https://raw.github.com/gridaphobe/CRL/ET_2016_05/GetComponents /tmp/
-ADD https://bitbucket.org/einsteintoolkit/manifest/raw/ET_2016_05/einsteintoolkit.th /tmp/
+# Download installer
+RUN curl -L https://raw.githubusercontent.com/gridaphobe/CRL/ET_2022_11/GetComponents -o /tmp/GetComponents
+RUN curl -L https://bitbucket.org/einsteintoolkit/manifest/raw/ET_2022_11/einsteintoolkit.th -o /tmp/einsteintoolkit.th
 RUN chmod a+rx /tmp/GetComponents &&            \
     chmod a+r /tmp/einsteintoolkit.th
 
