@@ -3,4 +3,4 @@ version: "3"
 services:
   et:
     build: .
-    image: zz/et:latest
+    image: einsteintoolkit

@@ -13,6 +13,7 @@ RUN apt-get update &&                                   \
     libfftw3-bin libfftw3-dev libfftw3-mpi-dev          \
     libjpeg-dev                                         \
     libltdl-dev                                         \
+    libudev-dev                                         \
     libopenblas-dev                                     \
     libopenmpi-dev openmpi-bin                          \
     libpapi-dev papi-tools                              \
