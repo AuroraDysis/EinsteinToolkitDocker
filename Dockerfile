@@ -48,7 +48,7 @@ COPY /einsteintoolkit.run simfactory/mdb/runscripts/
 COPY /defs.local.ini simfactory/etc/
 
 # Build
-RUN ./simfactory/bin/sim build -j16
+RUN ./simfactory/bin/sim build -j4
 
 # Export source and simulation directories
 VOLUME /home/scientist/Cactus /home/scientist/simulations
