@@ -55,5 +55,4 @@ VOLUME /home/scientist/Cactus /home/scientist/simulations
 
 # Run Simfactory by default
 # Hint: Use "execute" to execute arbitrary shell commands
-ENTRYPOINT ["./simfactory/bin/sim"]
-CMD []
+CMD ["/bin/bash"]
