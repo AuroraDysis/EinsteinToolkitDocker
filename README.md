@@ -2,7 +2,7 @@
 
 > :warning: **WIP**: This is a work in progress.
 
-[ ] Detect CPU cores of local machine automatically
+- [ ] Detect CPU cores of local machine automatically
 
 ## Overview
 
