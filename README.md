@@ -2,6 +2,8 @@
 
 > :warning: **WIP**: This is a work in progress.
 
+[ ] Detect CPU cores of local machine automatically
+
 ## Overview
 
 This guide demonstrates how to create and use a ready-to-use Einstein Toolkit image for running simulations in containers.
